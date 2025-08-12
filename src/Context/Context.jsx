@@ -8,7 +8,7 @@ const AppProvider = ({ children }) => {
   const [results, setResults] = useState("");
 
   const BASE_URL = "https://api.themoviedb.org/3";
-  const API_KEY = "4ebf43605d122ae1f95b3d897eab6ec0";
+  const API_KEY = import.meta.env.VITE_API_KEY;
 
   useEffect(() => {
     const fetchMovies = async () => {
