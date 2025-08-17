@@ -27,12 +27,12 @@ function MovieInfo() {
     fetchMovieDetails();
   }, [id]);
 
-  if (loading) return <p className="text-center mt-10">Loading...</p>;
+  if (loading) return <div className="text-center mt-10 text-white bg-black min-h-screen">Loading...</div>;
   if (!movie || movie.success === false)
     return <p className="text-center mt-10">Movie not found</p>;
 
   return (
-    <div className="bg-black min-h-screen text-white">
+    <div className="bg-gray-800 min-h-screen text-white">
       <div
         className="relative w-full h-[60vh] bg-cover bg-center"
         style={{
